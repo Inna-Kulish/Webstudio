@@ -28,22 +28,34 @@
                 <a class="link logo" href="./index.html">Web<span class="studio-dark">studio</span></a>
 
                 <ul class="list nav-list">
-                    <li class="nav-item"><a class="link nav-link" href="./index.html">Studio</a></li>
-                    <li class="nav-item"><a class="link nav-link current" href="./portfolio.html">Portfolio</a></li>
-                    <li class="nav-item"><a class="link nav-link" href="">Contacts</a></li>
+                    <li class="nav-item">
+                        <a class="link nav-link current" href="./index.html">Studio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="link nav-link" href="./portfolio.html">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="link nav-link" href="">Contacts</a>
+                    </li>
                 </ul>
-
             </nav>
             <!-- Contacts -->
             <address>
                 <ul class="list contact-list">
-                    <li class="contact-item"><a class="link contact-link"
-                            href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-                    <li class="contact-item"><a class="link contact-link" href="tel:+110001111111">+11 (000)
-                            111-11-11</a>
+                    <li class="contact-item">
+                        <a class="link contact-link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                    </li>
+                    <li class="contact-item">
+                        <a class="link contact-link" href="tel:+110001111111">+11 (000) 111-11-11</a>
                     </li>
                 </ul>
             </address>
+            <button class="menu-toggle js-open-menu btn" aria-expanded="false" aria-controls="mobile-menu">
+                <svg width="32" height="22" fill="none" viewBox="0 0 32 22" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.34766 20.0431H30.8861M1.34766 10.7354H30.8861M1.34766 1.42773H30.8861" stroke="#2E2F42"
+                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
         </div>
     </header>
     <main>
@@ -221,7 +233,7 @@
         </section>
     </main>
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer section">
         <div class="container footer-container">
             <div class="footer-logo">
                 <a class="link logo" href="./index.html">Web<span class="studio-light">studio</span></a>
@@ -272,20 +284,84 @@
             <div class="subscribe">
                 <p class="subscribe-title">Subscribe</p>
                 <form class="subscribe-form" name="subscribe_form">
-                    <label>
-                        <input class="subscribe-field" type="text" name="subscribe_email" placeholder="E-mail">
+                    <label class="subcribe-label">
+                        <input class="subscribe-field" type="email" name="subscribe_email" placeholder="E-mail">
                     </label>
-                    <div class="subscribe-wrap">
-                        <button class="subscribe-btn btn" type="submit">Subscribe</button>
+                    <button class="subscribe-btn btn" type="submit">Subscribe
                         <svg class="send-icon" width="24" height="24">
                             <use href="./images/icons.svg#icon-send"></use>
-                        </svg>
-                    </div>
+                        </svg></button>
                 </form>
             </div>
 
         </div>
     </footer>
+
+    <!-- Mobile menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+        <button class="menu-toggle js-close-menu modal-btn btn" type="button">
+            <svg class="modal-icon" width="8" height="8">
+                <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+        </button>
+
+        <ul class="mobile-menu list">
+            <li class="mobile-menu-item"><a class="mobile-menu-link link" href="./index.html">Studio</a></li>
+            <li class="mobile-menu-item"><a class="mobile-menu-link link" href="./portfolio.html">Portfolio</a></li>
+            <li class="mobile-menu-item"><a class="mobile-menu-link link" href="">Contacts</a></li>
+        </ul>
+
+        <div class="menu-contacts">
+            <ul class="menu-contacts-list list">
+                <li class="menu-contacts-item">
+                    <a class="menu-contacts-tel link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+                </li>
+                <li class="menu-contacts-item">
+                    <a class="menu-contacts-email link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                </li>
+            </ul>
+
+            <ul class="menu-socials socials list">
+                <li class="socials-item">
+                    <a class="socials-link link" href="https://instagram.com" aria-label="Instagram" target="_blank"
+                        rel="noopener noreferrer">
+                        <svg class="socials-icon" width="24" height="24">
+                            <use href="./images/icons.svg#icon-instagram"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="socials-item">
+                    <a class="socials-link link" href="https://twitter.com" aria-label="Twitter" target="_blank"
+                        rel="noopener noreferrer">
+                        <svg class="socials-icon" width="24" height="24">
+                            <use href="./images/icons.svg#icon-twitter"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="socials-item">
+                    <a class="socials-link link" href="https://facebook.com" aria-label="Facebook" target="_blank"
+                        rel="noopener noreferrer">
+                        <svg class="socials-icon" width="24" height="24">
+                            <use href="./images/icons.svg#icon-facebook"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="socials-item">
+                    <a class="socials-link link" href="https://linkedin.com" aria-label="LinkedIn" target="_blank"
+                        rel="noopener noreferrer">
+                        <svg class="socials-icon" width="24" height="24">
+                            <use href="./images/icons.svg#icon-linkedin"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous"></script>
+    <script defer src="js/mobile-menu.js"></script>
 </body>
 
 </html>

@@ -50,6 +50,12 @@
           </li>
         </ul>
       </address>
+      <button class="menu-toggle js-open-menu btn" aria-expanded="false" aria-controls="mobile-menu">
+        <svg width="32" height="22" fill="none" viewBox="0 0 32 22" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.34766 20.0431H30.8861M1.34766 10.7354H30.8861M1.34766 1.42773H30.8861" stroke="#2E2F42"
+            stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
     </div>
   </header>
 
@@ -57,7 +63,7 @@
     <!-- Hero title -->
     <section class="section hero-section">
       <div class="container">
-        <h1 class="hero-title">Effective Solutions for Your Business</h1>
+        <h1 class="hero-title title">Effective Solutions for Your Business</h1>
         <button class="btn btn-hero" type="button" data-modal-open>Order Service</button>
       </div>
     </section>
@@ -125,13 +131,25 @@
         <h2 class="title">What are we doing</h2>
         <ul class="list work-list">
           <li class="work-item">
-            <img src="./images/work/img-1.jpg" alt="Computer" width="360" />
+            <picture>
+              <source media="(min-width: 1200px)" srcset="
+                ./images/work/img-1_desk@1x.jpg 1x, ./images/work/img-1_desk@2x.jpg 2x" />
+              <img src="./images/work/img-1_desk@1x.jpg" alt="Computer" width="360" loading="lazy" />
+            </picture>
           </li>
           <li class="work-item">
-            <img src="./images/work/img-2.jpg" alt="Phone" width="360" />
+            <picture>
+              <source media="(min-width: 1200px)" srcset="
+                              ./images/work/img-2_desk@1x.jpg 1x, ./images/work/img-2_desk@2x.jpg 2x" />
+              <img src="./images/work/img-2_desk@1x.jpg" alt="Phone" width="360" loading="lazy" />
+            </picture>
           </li>
           <li class="work-item">
-            <img src="./images/work/img-3.jpg" alt="Laptop and phone" width="360" />
+            <picture>
+              <source media="(min-width: 1200px)" srcset="
+                                            ./images/work/img-3_desk@1x.jpg 1x, ./images/work/img-3_desk@2x.jpg 2x" />
+              <img src="./images/work/img-3_desk@1x.jpg" alt="Laptop and phone" width="360" loading="lazy" />
+            </picture>
           </li>
         </ul>
       </div>
@@ -143,9 +161,10 @@
         <h2 class="title">Our Team</h2>
         <ul class="list team-list">
           <li class="team-item">
-            <img class="team-img" src="./images/team/team-card-1.jpg" alt="Mark Guerrero, Product Designer"
-              width="264" />
-
+            <picture>
+              <source srcset="./images/team/img-1@1x.jpg 1x, ./images/team/img-1@2x.jpg 2x" />
+              <img src="./images/team/img-1@1x.jpg" alt="Mark Guerrero, Product Designer" width="264" loading="lazy" />
+            </picture>
             <div class="team-box">
               <h3 class="team-name">Mark Guerrero</h3>
               <p class="team-skill">Product Designer</p>
@@ -186,8 +205,10 @@
             </div>
           </li>
           <li class="team-item">
-            <img class="team-img" src="./images/team/team-card-2.jpg" alt="Tom Ford, Frontend Developer" width="264" />
-
+            <picture>
+              <source srcset="./images/team/img-2@1x.jpg 1x, ./images/team/img-2@2x.jpg 2x" />
+              <img src="./images/team/img-2@1x.jpg" alt="Tom Ford, Frontend Developer" width="264" loading="lazy" />
+            </picture>
             <div class="team-box">
               <h3 class="team-name">Tom Ford</h3>
               <p class="team-skill">Frontend Developer</p>
@@ -228,8 +249,10 @@
             </div>
           </li>
           <li class="team-item">
-            <img class="team-img" src="./images/team/team-card-3.jpg" alt="Camila Garcia, Marketing" width="264" />
-
+            <picture>
+              <source srcset="./images/team/img-3@1x.jpg 1x, ./images/team/img-3@2x.jpg 2x" />
+              <img src="./images/team/img-3@1x.jpg" alt="Camila Garcia, Marketing" width="264" loading="lazy" />
+            </picture>
             <div class="team-box">
               <h3 class="team-name">Camila Garcia</h3>
               <p class="team-skill">Marketing</p>
@@ -270,8 +293,10 @@
             </div>
           </li>
           <li class="team-item">
-            <img class="team-img" src="./images/team/team-card-4.jpg" alt="Daniel Wilson, UI Designer" width="264" />
-
+            <picture>
+              <source srcset="./images/team/img-4@1x.jpg 1x, ./images/team/img-4@2x.jpg 2x" />
+              <img src="./images/team/img-4@1x.jpg" alt="Daniel Wilson, UI Designer" width="264" loading="lazy" />
+            </picture>
             <div class="team-box">
               <h3 class="team-name">Daniel Wilson</h3>
               <p class="team-skill">UI Designer</p>
@@ -318,7 +343,7 @@
     <!-- Customers -->
     <section class="section customers-section">
       <h2 class="title">Customers</h2>
-      <div class="container">
+      <div class="customers-container container">
         <ul class="list customers-list">
           <li class="customers-item">
             <a class="customers-link link" href="">
@@ -368,7 +393,7 @@
   </main>
 
   <!-- Footer -->
-  <footer class="footer">
+  <footer class="footer section">
     <div class="container footer-container">
       <div class="footer-logo">
         <a class="link logo" href="./index.html">Web<span class="studio-light">studio</span></a>
@@ -419,15 +444,13 @@
       <div class="subscribe">
         <p class="subscribe-title">Subscribe</p>
         <form class="subscribe-form" name="subscribe_form">
-          <label>
-            <input class="subscribe-field" type="text" name="subscribe_email" placeholder="E-mail">
+          <label class="subcribe-label">
+            <input class="subscribe-field" type="email" name="subscribe_email" placeholder="E-mail">
           </label>
-          <div class="subscribe-wrap">
-            <button class="subscribe-btn btn" type="submit">Subscribe</button>
+          <button class="subscribe-btn btn" type="submit">Subscribe
             <svg class="send-icon" width="24" height="24">
               <use href="./images/icons.svg#icon-send"></use>
-            </svg>
-          </div>
+            </svg></button>
         </form>
       </div>
 
@@ -482,6 +505,73 @@
     </div>
   </div>
 
+  <!-- Mobile menu -->
+  <div class="menu-container js-menu-container" id="mobile-menu">
+    <button class="menu-toggle js-close-menu modal-btn btn" type="button">
+      <svg class="modal-icon" width="8" height="8">
+        <use href="./images/icons.svg#icon-close"></use>
+      </svg>
+    </button>
+
+    <ul class="mobile-menu list">
+      <li class="mobile-menu-item"><a class="mobile-menu-link link" href="./index.html">Studio</a></li>
+      <li class="mobile-menu-item"><a class="mobile-menu-link link" href="./portfolio.html">Portfolio</a></li>
+      <li class="mobile-menu-item"><a class="mobile-menu-link link" href="">Contacts</a></li>
+    </ul>
+
+    <div class="menu-contacts">
+      <ul class="menu-contacts-list list">
+        <li class="menu-contacts-item">
+          <a class="menu-contacts-tel link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+        </li>
+        <li class="menu-contacts-item">
+          <a class="menu-contacts-email link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+        </li>
+      </ul>
+
+
+      <ul class="menu-socials socials list">
+        <li class="socials-item">
+          <a class="socials-link link" href="https://instagram.com" aria-label="Instagram" target="_blank"
+            rel="noopener noreferrer">
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a class="socials-link link" href="https://twitter.com" aria-label="Twitter" target="_blank"
+            rel="noopener noreferrer">
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a class="socials-link link" href="https://facebook.com" aria-label="Facebook" target="_blank"
+            rel="noopener noreferrer">
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a class="socials-link link" href="https://linkedin.com" aria-label="LinkedIn" target="_blank"
+            rel="noopener noreferrer">
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous"></script>
+  <script defer src="js/mobile-menu.js"></script>
   <script src="./js/modal.js"></script>
 </body>
 
