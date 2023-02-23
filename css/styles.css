@@ -867,19 +867,50 @@ img {
 
 /* Portfolio */
 .portfolio-section {
-  padding-top: 96px;
+  padding-top: 48px;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-section {
+    padding-top: 64px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-section {
+    padding-top: 96px;
+  }
 }
 
 /* Filters button */
 .filter-list {
   display: flex;
-  justify-content: center;
-  margin-bottom: 72px;
+  flex-wrap: wrap;
   gap: 24px;
 }
 
+@media screen and (max-width: 767px) {
+  .filter-list {
+    width: 268px;
+    margin-bottom: 48px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .filter-list {
+    justify-content: center;
+    margin-bottom: 64px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .filter-list {
+    margin-bottom: 72px;
+  }
+}
+
 .filter-btn {
-  padding: 12px 24px;
+  padding: 8px 16px;
   border: 1px solid var(--accent);
   border-radius: 4px;
   color: var(--primary-brand);
@@ -887,6 +918,12 @@ img {
 
   transition: color var(--anim-fast), background-color var(--anim-fast),
     border-color var(--anim-fast), box-shadow var(--anim-fast);
+}
+
+@media screen and (min-width: 768px) {
+  .filter-btn {
+    padding: 12px 24px;
+  }
 }
 
 .filter-btn:hover,
@@ -906,8 +943,20 @@ img {
   row-gap: 48px;
 }
 
-.project-item {
-  flex-basis: calc((100% - (24px * 2)) / 3);
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .project-list {
+    row-gap: 72px;
+  }
+
+  .project-item {
+    flex-basis: calc((100% - (24px * 1)) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .project-item {
+    flex-basis: calc((100% - (24px * 2)) / 3);
+  }
 }
 
 .project-link {
@@ -1236,7 +1285,7 @@ img {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   padding: 80px 40px 40px 40px;
   background-color: var(--background-page);
   z-index: 999;
